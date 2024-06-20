@@ -202,7 +202,7 @@ END
 * add arabic lang setting
 * change terminal ```sudo update-alternatives --config x-terminal-emulator```
 * gnome customization
-  * gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]" // pop os ctrl+shift+e issue
+  * pop os ctrl+shift+e issue conflict with vscode shortcuts```gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"``` // 
   * switch alt tab to window switch
   * install gnome extensions manager
   * gnome extensions
