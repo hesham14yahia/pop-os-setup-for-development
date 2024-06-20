@@ -1,77 +1,11 @@
 # POP OS
 pop os setup for php laravel development
 
-## windows dual boot time wrong
+## windows dual boot fix wrong time
 ```timedatectl set-local-rtc 1```
 
 ## install curl
 ```sudo apt install curl```
-
-## install git
-```
-sudo apt install git
-git config --global user.name "hesham14yahia"
-git config --global user.email "hesham14yahia@gmail.com"
-git config --global credential.helper store
-git config --global alias.add-commit '!git add -A && git commit'
-git config --global alias.uncommit 'reset --soft HEAD^'
-git config --global core.filemode false // might need it with pop os
-```
-## install fonts for better visuals
-```
-sudo apt install ubuntu-restricted-extras -y
-sudo apt install fonts-firacode
-git clone https://github.com/powerline/fonts.git // fonts for zsh
-mv fonts powerline-fonts
-cd powerline-fonts
-./install.sh
-.\install.ps1
-sudo fc-cache -f -v
-```
-## install zsh
-```
-sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sh -c "$(curl -fsSL https://raw.github.com/vemonet/biratime/main/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-nano ~/.zshrc
-plugins=(git laravel node npm composer git python zsh-autosuggestions)
-"fontFace" : "DejaVu Sans Mono for Powerline"
-```
-* add arabic lang setting
-
-* install chrome
-
-vscode setting
-"editor.fontFamily": "'Noto Mono', 'Courier New', monospace",
-"editor.fontFamily": "Ubuntu Mono",
-"editor.fontSize": 16,
-
-## install brave
-```
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser
-```
-*install free download manager
-
-## laptop power tweeks
-```
-sudo apt install tlp
-sudo add-apt-repository -y ppa:linuxuprising/apps
-sudo apt update
-sudo apt install tlpui
-```
-
-## install flameshot
-```
-sudo apt install flameshot
-```
-https://flameshot.org/docs/guide/key-bindings/#:~:text=Open%20Settings%20%E2%86%92%20Devices%20%E2%86%92,Flameshot'%20or%20'PrintScreen'.
-
-* install dash to panel
-* import setting file
 
 ## install php
 ```
@@ -128,9 +62,6 @@ exit;
 // sudo usermod -d /var/lib/mysql/mysql
 // sudo service mysql start
 ```
-
-* install phpmyadmin
-
 import and export db
 import "mysql -u root -p database_name < file.sql"
 export "mysql -u root -p database_name > file.sql"
@@ -147,42 +78,88 @@ nvm --version
 nvm install node
 ```
 
-## change terminal
-```sudo update-alternatives --config x-terminal-emulator```
+## install git
+```
+sudo apt install git
+git config --global user.name "hesham14yahia"
+git config --global user.email "hesham14yahia@gmail.com"
+git config --global credential.helper store
+git config --global alias.add-commit '!git add -A && git commit'
+git config --global alias.uncommit 'reset --soft HEAD^'
+git config --global core.filemode false // might need it with pop os
+```
+## install fonts for better visuals
+```
+sudo apt install ubuntu-restricted-extras -y
+sudo apt install fonts-firacode
+git clone https://github.com/powerline/fonts.git // fonts for zsh
+mv fonts powerline-fonts
+cd powerline-fonts
+./install.sh
+.\install.ps1
+sudo fc-cache -f -v
+```
+## install zsh
+```
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/vemonet/biratime/main/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+nano ~/.zshrc
+plugins=(git laravel node npm composer git python zsh-autosuggestions)
+```
 
-* install slack
+## install brave
+```
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+```
 
-* install zoom
+## install tlp for better power management for laptops
+```
+sudo apt install tlp
+sudo add-apt-repository -y ppa:linuxuprising/apps
+sudo apt update
+sudo apt install tlpui
+```
 
-* install onlyoffice
+## install flameshot
+```
+sudo apt install flameshot
+```
+https://flameshot.org/docs/guide/key-bindings/#:~:text=Open%20Settings%20%E2%86%92%20Devices%20%E2%86%92,Flameshot'%20or%20'PrintScreen'.
 
-* install postman
+## download deb and install
+* phpmyadmin
+* chrome
+* free download manager
+* vscode
+* slack
+* zoom
+* onlyoffice
+* postman
 
-## gnome customiztion
-* gsettings set org.gnome.shell.extensions.dash-to-dock click-action "minimize" // no need in pop os
-* gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]" // pop os ctrl+shift+e issue
-* switch alt tab to window switch
-* install gnome extensions manager
-* gnome extensions
-* audio selector
-* clipboard indicator
-* user themes
-* just perfection
-* places status indicator
-* removable drive indicator
-* Date Menu Formatter ( EEE, MMM d ' | ' h : mm aaa ' ')
-* Media Controls
-* Dash to Dock
+## quality of life
+* add arabic lang setting
+* change terminal ```sudo update-alternatives --config x-terminal-emulator```
+* gnome customization
+  * gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]" // pop os ctrl+shift+e issue
+  * switch alt tab to window switch
+  * install gnome extensions manager
+  * gnome extensions
+  * audio selector
+  * clipboard indicator
+  * user themes
+  * just perfection
+  * places status indicator
+  * removable drive indicator
+  * Date Menu Formatter ( EEE, MMM d ' | ' h : mm aaa ' ')
+  * Media Controls
+  * Dash to Dock
+* turn off bluetooth on login ```echo "rfkill block bluetooth" >> ~/.zprofile```
+* switch windows with alt + tab ```gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"```
 
-
-## turn off bluetooth on login
-```echo "rfkill block bluetooth" >> ~/.zprofile```
-
-## fix external drive unkown error
+## fix external drive unknown error
 ```sudo ntfsfix /dev/sdb1```
-
-## switch windows with alt + tab
-* settings > keyboard > navigation > switch windows
-```
-gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
-```
