@@ -49,6 +49,11 @@ php composer-setup.php && php -r "unlink('composer-setup.php');"
 sudo mv /home/hesham/composer.phar /usr/bin/composer
 sudo chmod +x /usr/bin/composer
 ```
+set which php version composer use
+```
+php8.0 /usr/bin/composer update
+```
+
 <hr>
 
 ## install valet
@@ -60,6 +65,11 @@ valet install
 cd ~/.valet/Sites
 valet park
 ```
+set which php version valet use
+```
+valet use 8.0
+```
+
 <hr>
 
 ## install mysql sever
