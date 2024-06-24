@@ -72,12 +72,26 @@ exit;
 // sudo usermod -d /var/lib/mysql/mysql
 // sudo service mysql start
 ```
-import and export db
-import "mysql -u root -p database_name < file.sql"
-export "mysql -u root -p database_name > file.sql"
-disable foreign key check "sudo mysql -u root -p"
+### import and export db
+import 
+```
+mysql -u root -p database_name < file.sql
+```
+export 
+```
+mysql -u root -p database_name > file.sql
+```
+### disable foreign key check if needed 
+```
+sudo mysql -u root -p
+```
+```
 SET GLOBAL FOREIGN_KEY_CHECKS=0;
+```
+after importing
+```
 SET GLOBAL FOREIGN_KEY_CHECKS=1;
+```
 
 <hr>
 
