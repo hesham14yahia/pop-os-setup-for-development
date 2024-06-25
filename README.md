@@ -10,9 +10,12 @@ pop os setup for php laravel development "currently running pop os 22.04"
 
 
 ## install php
+* check version 
+  ```
+  apt-cache policy php
+  ```
+* check link "https://www.tecmint.com/install-php-8-on-ubuntu/"
 ```
-check version "apt-cache policy php"
-check link "https://www.tecmint.com/install-php-8-on-ubuntu/"
 sudo apt install ca-certificates apt-transport-https software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
@@ -33,12 +36,12 @@ sudo apt install php8.3-fpm php8.3-curl php8.3-mbstring php8.3-mysql php8.3-xml 
   ```
   sudo update-alternatives --config php
   ```
-if needed edit php.ini
-* upload_max_filesize 5000M
-* post_max_size 5000M
-* memory_limit 256M
-* max_execution_time 300
-* max_input_time 300
+* if needed edit php.ini
+  * upload_max_filesize 5000M
+  * post_max_size 5000M
+  * memory_limit 256M
+  * max_execution_time 300
+  * max_input_time 300
 
 ## install composer
 ```
