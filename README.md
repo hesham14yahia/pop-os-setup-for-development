@@ -33,12 +33,16 @@ sudo apt install php8.2-fpm php8.2-curl php8.2-mbstring php8.2-mysql php8.2-xml 
 
 sudo apt install php8.3-fpm php8.3-curl php8.3-mbstring php8.3-mysql php8.3-xml php8.3-cli php8.3-zip php8.3-bcmath php8.3-gd unzip network-manager libnss3-tools jq xsel
 ```
-edit php.ini
-upload_max_filesize 5000M
-post_max_size 5000M
-memory_limit 256M
-max_execution_time 300
-max_input_time 300
+change which php version pop-os use 8.0 as example
+```
+sudo update-alternatives --config php
+```
+if needed edit php.ini
+* upload_max_filesize 5000M
+* post_max_size 5000M
+* memory_limit 256M
+* max_execution_time 300
+* max_input_time 300
 
 <hr>
 
@@ -49,9 +53,10 @@ php composer-setup.php && php -r "unlink('composer-setup.php');"
 sudo mv /home/hesham/composer.phar /usr/bin/composer
 sudo chmod +x /usr/bin/composer
 ```
-set which php version composer use
+
+check php version composer use 
 ```
-php8.0 /usr/bin/composer update
+composer -vvv about 2>&1 | grep "PHP"
 ```
 
 <hr>
@@ -65,9 +70,15 @@ valet install
 cd ~/.valet/Sites
 valet park
 ```
-set which php version valet use
+
+change which php version valet use php 8.0 as example
 ```
 valet use 8.0
+```
+
+some times u need to remove package and reinstall it to change php version package depandeses use
+```
+composer global remove cpriego/valet-linux && composer global require cpriego/valet-linux
 ```
 
 <hr>
@@ -241,6 +252,24 @@ END
   * Dash to Dock
 * turn off bluetooth on login ```echo "rfkill block bluetooth" >> ~/.zprofile```
 * switch windows with alt + tab ```gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"```
+
+<hr>
+
+## install wmctrl 
+for customizing switching main apps 
+```
+sudo apt install wmctrl
+```
+
+list apps name
+```
+wmctrl -l
+```
+
+switch focus to app
+```
+wmctrl -a 'App Name'
+```
 
 <hr>
 
