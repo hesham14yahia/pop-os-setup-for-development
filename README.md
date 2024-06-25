@@ -1,17 +1,13 @@
 # POP OS
-pop os setup for php laravel development
-
-<hr>
+pop os setup for php laravel development "currently running pop os 22.04"
 
 ## windows dual boot fix wrong time
 ```timedatectl set-local-rtc 1```
 
-<hr>
 
 ## install curl
 ```sudo apt install curl```
 
-<hr>
 
 ## install php
 ```
@@ -33,18 +29,16 @@ sudo apt install php8.2-fpm php8.2-curl php8.2-mbstring php8.2-mysql php8.2-xml 
 
 sudo apt install php8.3-fpm php8.3-curl php8.3-mbstring php8.3-mysql php8.3-xml php8.3-cli php8.3-zip php8.3-bcmath php8.3-gd unzip network-manager libnss3-tools jq xsel
 ```
-change which php version pop-os use 8.0 as example
-```
-sudo update-alternatives --config php
-```
+* change which php version pop-os use 8.0 as example
+  ```
+  sudo update-alternatives --config php
+  ```
 if needed edit php.ini
 * upload_max_filesize 5000M
 * post_max_size 5000M
 * memory_limit 256M
 * max_execution_time 300
 * max_input_time 300
-
-<hr>
 
 ## install composer
 ```
@@ -54,12 +48,10 @@ sudo mv /home/hesham/composer.phar /usr/bin/composer
 sudo chmod +x /usr/bin/composer
 ```
 
-check php version composer use 
-```
-composer -vvv about 2>&1 | grep "PHP"
-```
-
-<hr>
+* check php version composer use 
+  ```
+  composer -vvv about 2>&1 | grep "PHP"
+  ```
 
 ## install valet
 ```
@@ -71,17 +63,15 @@ cd ~/.valet/Sites
 valet park
 ```
 
-change which php version valet use php 8.0 as example
-```
-valet use 8.0
-```
+* change which php version valet use php 8.0 as example
+  ```
+  valet use 8.0
+  ```
 
-some times u need to remove package and reinstall it to change php version package depandeses use
-```
-composer global remove cpriego/valet-linux && composer global require cpriego/valet-linux
-```
-
-<hr>
+* some times u need to remove package and reinstall it to change php version package dependents use
+  ```
+  composer global remove cpriego/valet-linux && composer global require cpriego/valet-linux
+  ```
 
 ## install mysql sever
 ```
@@ -94,27 +84,26 @@ exit;
 // sudo service mysql start
 ```
 ### import and export db
-import 
-```
-mysql -u root -p database_name < file.sql
-```
-export 
-```
-mysql -u root -p database_name > file.sql
-```
+* import 
+  ```
+  mysql -u root -p database_name < file.sql
+  ```
+* export 
+  ```
+  mysql -u root -p database_name > file.sql
+  ```
 ### disable foreign key check if needed 
-```
-sudo mysql -u root -p
-```
-```
-SET GLOBAL FOREIGN_KEY_CHECKS=0;
-```
-after importing
-```
-SET GLOBAL FOREIGN_KEY_CHECKS=1;
-```
-
-<hr>
+* open mysql terminal
+  ```
+  sudo mysql -u root -p
+  ```
+  ```
+  SET GLOBAL FOREIGN_KEY_CHECKS=0;
+  ```
+* after importing
+  ```
+  SET GLOBAL FOREIGN_KEY_CHECKS=1;
+  ```
 
 ## install node/nvm
 ```
@@ -124,7 +113,6 @@ source ~/.nvm/nvm.sh
 nvm --version
 nvm install node
 ```
-<hr>
 
 ## install git
 ```
@@ -136,7 +124,6 @@ git config --global alias.add-commit '!git add -A && git commit'
 git config --global alias.uncommit 'reset --soft HEAD^'
 git config --global core.filemode false // might need it with pop os
 ```
-<hr>
 
 ## install fonts for better visuals
 ```
@@ -149,7 +136,6 @@ cd powerline-fonts
 .\install.ps1
 sudo fc-cache -f -v
 ```
-<hr>
 
 ## install zsh
 ```
@@ -161,8 +147,6 @@ nano ~/.zshrc
 plugins=(git laravel node npm composer git python zsh-autosuggestions)
 ```
 
-<hr>
-
 ## install brave
 ```
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -170,7 +154,6 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo apt update
 sudo apt install brave-browser
 ```
-<hr>
 
 ## install tlp for better power management for laptops
 ```
@@ -179,7 +162,6 @@ sudo add-apt-repository -y ppa:linuxuprising/apps
 sudo apt update
 sudo apt install tlpui
 ```
-<hr>
 
 ## install flameshot
 ```
@@ -187,7 +169,6 @@ sudo apt install flameshot
 ```
 https://flameshot.org/docs/guide/key-bindings/#:~:text=Open%20Settings%20%E2%86%92%20Devices%20%E2%86%92,Flameshot'%20or%20'PrintScreen'.
 
-<hr>
 
 ## install postman
 __Step 1__
@@ -219,7 +200,6 @@ Type=Application
 Categories=Development;
 END
 ```
-<hr>
 
 ## download deb and install
 * phpmyadmin https://www.phpmyadmin.net/downloads/
@@ -229,9 +209,6 @@ END
 * slack https://slack.com/downloads/linux
 * zoom https://zoom.us/download?os=linux
 * onlyoffice https://www.onlyoffice.com/en/download-desktop.aspx?from=desktop
-
-
-<hr>
 
 ## quality of life
 * add arabic lang setting
@@ -253,25 +230,21 @@ END
 * turn off bluetooth on login ```echo "rfkill block bluetooth" >> ~/.zprofile```
 * switch windows with alt + tab ```gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"```
 
-<hr>
-
 ## install wmctrl 
 for customizing switching main apps 
 ```
 sudo apt install wmctrl
 ```
 
-list apps name
-```
-wmctrl -l
-```
+* list apps name
+  ```
+  wmctrl -l
+  ```
 
-switch focus to app
-```
-wmctrl -a 'App Name'
-```
-
-<hr>
+* switch focus to app
+  ```
+  wmctrl -a 'App Name'
+  ```
 
 ## fix external drive unknown error
-```sudo ntfsfix /dev/sdb1```
+```sudo ntfsfix /dev/sdb1``` replace "sdb1" with drive name
