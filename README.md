@@ -217,19 +217,17 @@ END
 * add arabic lang setting
 * change terminal ```sudo update-alternatives --config x-terminal-emulator```
 * gnome customization
-  * pop os ctrl+shift+e issue conflict with vscode shortcuts```gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"``` // 
-  * switch alt tab to window switch
+  * pop os ctrl+shift+e issue conflict with vscode shortcuts```gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"```
   * install gnome extensions manager
-  * gnome extensions
   * audio selector
   * clipboard indicator
-  * user themes
-  * just perfection
-  * places status indicator
-  * removable drive indicator
+  * Dash to Dock "more customize for dock"
+  * Dash to Panel "more customize for top bar"
   * Date Menu Formatter ( EEE, MMM d ' | ' h : mm aaa ' ')
   * Media Controls
-  * Dash to Dock
+  * places status indicator
+  * removable drive indicator
+  * sound percentage
 * turn off bluetooth on login ```echo "rfkill block bluetooth" >> ~/.zprofile```
 * switch windows with alt + tab ```gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"```
 
