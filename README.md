@@ -249,5 +249,15 @@ sudo apt install wmctrl
   wmctrl -a 'App Name'
   ```
 
+## stop asking for password
+* edit sudoers
+  ```
+  sudo nano -w /etc/sudoers
+  ```
+* change ```%sudo  ALL=(ALL:ALL) ALL``` to
+  ```
+    %sudo  ALL=(ALL:ALL) NOPASSWD:ALL
+  ```
+
 ## fix external drive unknown error
 ```sudo ntfsfix /dev/sdb1``` replace "sdb1" with drive name
