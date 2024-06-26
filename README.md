@@ -212,6 +212,7 @@ END
 * slack https://slack.com/downloads/linux
 * zoom https://zoom.us/download?os=linux
 * onlyoffice https://www.onlyoffice.com/en/download-desktop.aspx?from=desktop
+* table plus https://tableplus.com/blog/2019/10/tableplus-linux-installation.html
 
 ## quality of life
 * add arabic lang setting
