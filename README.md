@@ -4,10 +4,29 @@ pop os setup for php laravel development "currently running pop os 22.04"
 ## windows dual boot fix wrong time
 ```timedatectl set-local-rtc 1```
 
-
 ## install curl
 ```sudo apt install curl```
 
+## install git
+```
+sudo apt install git
+git config --global user.name "hesham14yahia"
+git config --global user.email "hesham14yahia@gmail.com"
+git config --global credential.helper store
+git config --global alias.add-commit '!git add -A && git commit'
+git config --global alias.uncommit 'reset --soft HEAD^'
+git config --global core.filemode false // might need it with pop os
+```
+
+## install zsh
+```
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/vemonet/biratime/main/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+nano ~/.zshrc
+plugins=(git laravel node npm composer git python zsh-autosuggestions)
+```
 
 ## install php
 * check version 
@@ -117,17 +136,6 @@ nvm --version
 nvm install node
 ```
 
-## install git
-```
-sudo apt install git
-git config --global user.name "hesham14yahia"
-git config --global user.email "hesham14yahia@gmail.com"
-git config --global credential.helper store
-git config --global alias.add-commit '!git add -A && git commit'
-git config --global alias.uncommit 'reset --soft HEAD^'
-git config --global core.filemode false // might need it with pop os
-```
-
 ## install fonts for better visuals
 ```
 sudo apt install ubuntu-restricted-extras -y
@@ -138,16 +146,6 @@ cd powerline-fonts
 ./install.sh
 .\install.ps1
 sudo fc-cache -f -v
-```
-
-## install zsh
-```
-sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sh -c "$(curl -fsSL https://raw.github.com/vemonet/biratime/main/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-nano ~/.zshrc
-plugins=(git laravel node npm composer git python zsh-autosuggestions)
 ```
 
 ## install brave
@@ -255,7 +253,7 @@ sudo apt install wmctrl
   ```
 * change ```%sudo  ALL=(ALL:ALL) ALL``` to
   ```
-    %sudo  ALL=(ALL:ALL) NOPASSWD:ALL
+  %sudo  ALL=(ALL:ALL) NOPASSWD:ALL
   ```
 
 ## fix external drive unknown error
