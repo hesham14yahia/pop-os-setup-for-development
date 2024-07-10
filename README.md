@@ -227,6 +227,7 @@ END
   * places status indicator
   * removable drive indicator
   * sound percentage
+  * Bluetooth Quick Connect
 * turn off bluetooth on login ```echo "rfkill block bluetooth" >> ~/.zprofile```
 * switch windows with alt + tab ```gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"```
 
