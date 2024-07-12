@@ -229,7 +229,8 @@ END
   * sound percentage
   * Bluetooth Quick Connect
 * turn off bluetooth on login ```echo "rfkill block bluetooth" >> ~/.zprofile```
-* switch windows with alt + tab ```gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"```
+* switch windows with alt + tab ```gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"```
+* remove super + tab usage from keyboard shortcut for usage of vscode
 
 ## install wmctrl 
 for customizing switching main apps 
