@@ -1,4 +1,4 @@
-# POP OS
+# POP OS setup for php laravel development
 pop os setup for php laravel development "currently running pop os 22.04"
 
 ## windows dual boot fix wrong time
