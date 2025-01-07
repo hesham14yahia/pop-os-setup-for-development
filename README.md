@@ -47,26 +47,26 @@ sudo apt update
 ```
 
 ```
-sudo apt install php7.2-fpm php7.2-curl php7.2-mbstring php7.2-mysqll php7.2-sqlite3 php7.2-xml php7.2-cli php7.2-zip php7.2-bcmath php7.2-gd unzip network-manager libnss3-tools jq xsel
+sudo apt install php7.2-fpm php7.2-curl php7.2-mbstring php7.2-mysql php7.2-sqlite3 php7.2-xml php7.2-cli php7.2-zip php7.2-bcmath php7.2-gd unzip network-manager libnss3-tools jq xsel
 ```
 
 ```
-sudo apt install php7.4-fpm php7.4-curl php7.4-mbstring php7.4-mysqll php7.4-sqlite3 php7.4-xml php7.4-cli php7.4-zip php7.4-bcmath php7.4-gd unzip network-manager libnss3-tools jq xsel
+sudo apt install php7.4-fpm php7.4-curl php7.4-mbstring php7.4-mysql php7.4-sqlite3 php7.4-xml php7.4-cli php7.4-zip php7.4-bcmath php7.4-gd unzip network-manager libnss3-tools jq xsel
 ```
 
 ```
-sudo apt install php8.0-fpm php8.0-curl php8.0-mbstring php8.0-mysqll php8.0-sqlite3 php8.0-xml php8.0-cli php8.0-zip php8.0-bcmath php8.0-gd unzip network-manager libnss3-tools jq xsel
+sudo apt install php8.0-fpm php8.0-curl php8.0-mbstring php8.0-mysql php8.0-sqlite3 php8.0-xml php8.0-cli php8.0-zip php8.0-bcmath php8.0-gd unzip network-manager libnss3-tools jq xsel
 ```
 
 ```
-sudo apt install php8.1-fpm php8.1-curl php8.1-mbstring php8.1-mysqll php8.1-sqlite3 php8.1-xml php8.1-cli php8.1-zip php8.1-bcmath php8.1-gd unzip network-manager libnss3-tools jq xsel
+sudo apt install php8.1-fpm php8.1-curl php8.1-mbstring php8.1-mysql php8.1-sqlite3 php8.1-xml php8.1-cli php8.1-zip php8.1-bcmath php8.1-gd unzip network-manager libnss3-tools jq xsel
 ```
 ```
-sudo apt install php8.2-fpm php8.2-curl php8.2-mbstring php8.2-mysqll php8.2-sqlite3 php8.2-xml php8.2-cli php8.2-zip php8.2-bcmath php8.2-gd unzip network-manager libnss3-tools jq xsel
+sudo apt install php8.2-fpm php8.2-curl php8.2-mbstring php8.2-mysql php8.2-sqlite3 php8.2-xml php8.2-cli php8.2-zip php8.2-bcmath php8.2-gd unzip network-manager libnss3-tools jq xsel
 ```
 
 ```
-sudo apt install php8.3-fpm php8.3-curl php8.3-mbstring php8.3-mysqll php8.3-sqlite3 php8.3-xml php8.3-cli php8.3-zip php8.3-bcmath php8.3-gd unzip network-manager libnss3-tools jq xsel
+sudo apt install php8.3-fpm php8.3-curl php8.3-mbstring php8.3-mysql php8.3-sqlite3 php8.3-xml php8.3-cli php8.3-zip php8.3-bcmath php8.3-gd unzip network-manager libnss3-tools jq xsel
 ```
 
 ```
