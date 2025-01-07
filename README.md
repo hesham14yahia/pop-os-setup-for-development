@@ -87,8 +87,14 @@ sudo apt install php8.4-fpm php8.4-curl php8.4-mbstring php8.4-mysql php8.5-sqli
 ## install composer
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+```
+```
 php composer-setup.php && php -r "unlink('composer-setup.php');"
+```
+```
 sudo mv /home/hesham/composer.phar /usr/bin/composer
+```
+```
 sudo chmod +x /usr/bin/composer
 ```
 
@@ -100,10 +106,20 @@ sudo chmod +x /usr/bin/composer
 ## install valet
 ```
 composer global require cpriego/valet-linux
+```
+```
 echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.zprofile
+```
+```
 source ~/.zprofile
+```
+```
 valet install
+```
+```
 cd ~/.valet/Sites
+```
+```
 valet park
 ```
 
