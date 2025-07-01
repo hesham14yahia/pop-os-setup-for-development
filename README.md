@@ -70,7 +70,7 @@ sudo apt install php8.3-fpm php8.3-curl php8.3-mbstring php8.3-mysql php8.3-sqli
 ```
 
 ```
-sudo apt install php8.4-fpm php8.4-curl php8.4-mbstring php8.4-mysql php8.5-sqlite3 php8.4-xml php8.4-cli php8.4-zip php8.4-bcmath php8.4-gd unzip network-manager libnss3-tools jq xsel
+sudo apt install php8.4-fpm php8.4-curl php8.4-mbstring php8.4-mysql php8.4-sqlite3 php8.4-xml php8.4-cli php8.4-zip php8.4-bcmath php8.4-gd unzip network-manager libnss3-tools jq xsel
 ```
 
 * change which php version pop-os use 8.0 as example
