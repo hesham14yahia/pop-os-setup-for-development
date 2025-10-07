@@ -302,4 +302,5 @@ sudo fdisk -l
 sudo apt install nfs-common
 sudo apt install cifs-utils
 sudo ntfsfix -d /dev/sdb1
-``` replace "sdb1" with drive name
+```
+replace "sdb1" with drive name
